@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet" type="text/css">
+		<title>The Ultimate Christmas Survey</title>
+		<style>
+			body::before {
+			  position: fixed;
+			  top: 0;
+			  left: 0;
+			  height: 100%;
+			  width: 100%;
+			  z-index: -1;
+			  background: var(--color-orange); 
+			  background-image: linear-gradient(90deg, rgba(204, 204, 255, 0.7), rgba(244, 184, 240, 0.8)
+			  ), url(https://porcierto.com.mx/wp-content/uploads/2020/01/Home-decoration-camels-the-magi-desert-biblical-magi-melchior-gaspar-religion-artwork-Silk-Fabric-Poster-Print.jpg); 
+			  background-size: cover;
+			  background-repeat: no-repeat;
+			  background-position: center;
+			}
+
+			h1{
+			  text-align: center;
+			  font-family: Space Mono;
+			  font-size: 80px; 
+			  font-style: bold; 
+			}
+			p{
+			  text-align: center;
+			  font-family: Space Mono;
+			  font-size: 20px; 
+			  font-style: italic;
+			  padding-top: 0px;
+			  padding-bottom: 25x;
+			}
+			label{
+			  display: flex;
+			  align-items: center;
+			  font-size: 18px;
+			  font-family: Space Mono;
+			  padding-bottom: 5px;
+			  padding-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1 id="title"><strong>The Ultimate Christmas Survey</strong></h1>
+			<p id="description">Help us find out just how much of the Christmas story society knows!</p>
+			<form id="survey-form">
+				<div class="form-group">
+					<label id="name-label" for="name">Name</label>
+					<input
+						type="text"
+						name="name"
+						id="name"
+						class="form-control"
+						placeholder="Enter your name"
+						required
+						>
+				</div>
+				<div class="form-group">
+					<label id="email-label" for="email">Email</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						class="form-control"
+						placeholder="Enter your Email"
+						required
+						>
+				</div>
+				<div class="form-group">
+					<label id="number-label" for="number" for="number">Age<span class="clue"></span></label>
+					<input
+						type="number"
+						name="age"
+						id="number"
+						min="7"
+						max="99"
+						class="form-control"
+						placeholder="Age"
+						>
+				</div>
+				<div class="form-group">
+					<label>What religion do you identify with?</label>
+					<select id="dropdown" name="religion" class="form-control" required>
+						<option disabled selected value>Select your religion</option>
+						<option value="judaism">Judaism</option>
+						<option value="christianity">Christianity</option>
+						<option value="islam">Islam</option>
+						<option value="hinduism">Hinduism</option>
+						<option value="buddhism">Buddhism</option>
+						<option value="nonreligious">Nonreligious</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Does your religion celebrate Christmas?</label>
+					<label>
+					<input
+						name="celebrate-christmas"
+						value="yes"
+						type="radio"
+						class="input-radio"
+						checked
+						>Yes</label>
+					<label>
+					<input
+						name="celebrate-christmas"
+						value="not-sure"
+						type="radio"
+						class="input-radio"
+						checked
+						>Not sure</label>
+					<label>
+					<input
+						name="celebrate-christmas"
+						value="no"
+						type="radio"
+						class="input-radio"
+						checked
+						>No</label>
+				</div>
+				<div class="form-group">
+					<label>Check all that apply to you:</label>
+					<label>
+					<input
+						name="apply"
+						value="I-celebrate-christmas"
+						type="checkbox"
+						class="input-checkbox"
+						>I celebrate Christmas</label>
+					<label>
+					<input
+						name="apply"
+						value="believe"
+						type="checkbox"
+						class="input-checkbox"
+						>I believe in the holy stories of my religion</label>
+					<label>
+					<input
+						name="apply"
+						value="by-choice"
+						type="checkbox"
+						class="input-checkbox"
+						>I am part of this religion by choice</label>
+					<label>
+					<input
+						name="apply"
+						value="I would like to change my religion status if I had a choice"
+						type="checkbox"
+						class="input-checkbox"
+						>I would like to change my religion status if I had a choice</label>
+					<label>
+					<input
+						name="lonely"
+						value="by-choice"
+						type="checkbox"
+						class="input-checkbox"
+					>I feel lonely during the Christmas season</label>
+				</div>
+				<div class="form-group">
+					<label>Anything to add?</label>
+					<textarea
+						id="comments"
+						class="input-textarea"
+						name="add"
+						placeholder="Enter your comments here..."></textarea>
+				</div>
+				<div class="form-group">
+					<button type="submit" id="submit" class="submit-button">
+					Submit
+					</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
